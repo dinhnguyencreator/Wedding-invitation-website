@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Cưới - Đức Khánh & Hải Ngọc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/invitation-card.css">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher" id="languageSwitcher">
+        <button class="lang-toggle" id="langToggle">
+            <span class="lang-flag" id="currentLangFlag">🇻🇳</span>
+            <span class="lang-text" id="currentLangText">VI</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-option" data-lang="vi">
+                <span class="lang-flag">🇻🇳</span>
+                <span>Tiếng Việt</span>
+            </button>
+            <button class="lang-option" data-lang="en">
+                <span class="lang-flag">🇬🇧</span>
+                <span>English</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-heart">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="loading-text">
+                <h2 data-i18n="invitation.loading">Đang tải thiệp mời...</h2>
+                <div class="loading-bar">
+                    <div class="loading-progress" id="loadingProgress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Invitation Card Cover with Envelope -->
+    <div class="invitation-cover" id="invitationCover">
+        <div class="cover-background"></div>
+
+        <!-- Bouncing Envelope -->
+        <div class="envelope-container" id="envelopeContainer">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <div class="envelope-seal">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="envelope-decoration">
+                        <div class="stamp">
+                            <i class="fas fa-ring"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="letter-inside">
+                    <div class="letter-text">
+                        <p class="letter-to" data-i18n="invitation.respectfullyInvite">Trân trọng kính mời</p>
+                        <h2 class="letter-names">Đức Khánh & Hải Ngọc</h2>
+                        <p class="letter-date">27.12.2025</p>
+                    </div>
+                </div>
+            </div>
+            <p class="click-hint" data-i18n="invitation.clickHint">Nhấp vào phong thư để mở thiệp mời</p>
+        </div>
+
+        <div class="floating-petals">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+        </div>
+    </div>
+
+    <!-- Invitation Card Opened -->
+    <div class="invitation-opened" id="invitationOpened">
+        <div class="invitation-container">
+            <!-- Left Side - Front of Card -->
+            <div class="card-side left-side">
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="header-ornament"></div>
+                        <h3 class="invitation-label" data-i18n="invitation.cardTitle">THIỆP MỜI ĐÁM CƯỚI</h3>
+                        <div class="header-ornament"></div>
+                    </div>
+
+                    <div class="couple-introduction">
+                        <div class="intro-ornament top-ornament"></div>
+
+                        <p class="intro-text" data-i18n="invitation.respectfullyInvite">Trân trọng kính mời</p>
+
+                        <div class="couple-names-display">
+                            <h1 class="display-name groom">Đức Khánh</h1>
+                            <div class="name-separator">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h1 class="display-name bride">Hải Ngọc</h1>
+                        </div>
+
+                        <div class="wedding-info-brief">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span data-i18n="invitation.weddingDate">Thứ Bảy, 27 Tháng 12, 2025</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="far fa-clock"></i>
+                                <span data-i18n="invitation.weddingTime">18:00 Giờ</span>
+                            </div>
+                        </div>
+
+                        <div class="intro-ornament bottom-ornament"></div>
+                    </div>
+
+                    <div class="card-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p data-i18n="invitation.quote">"Tình yêu là điều tuyệt vời nhất mà hai con người có thể trao cho nhau"</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Back of Card -->
+            <div class="card-side right-side">
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="header-ornament"></div>
+                        <h3 class="invitation-label" data-i18n="invitation.infoTitle">THÔNG TIN ĐÁM CƯỚI</h3>
+                        <div class="header-ornament"></div>
+                    </div>
+
+                    <div class="family-info">
+                        <div class="family-section groom-family">
+                            <div class="family-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4 data-i18n="invitation.groomFamily">Gia Đình Chú Rể</h4>
+                            <p class="parent-name" data-i18n="invitation.groomFather">Ông: Nguyễn Văn A</p>
+                            <p class="parent-name" data-i18n="invitation.groomMother">Bà: Trần Thị B</p>
+                            <div class="family-divider"></div>
+                            <p class="child-name" data-i18n="invitation.groomSon">Con trai: Nguyễn Đức Khánh</p>
+                        </div>
+
+                        <div class="family-heart">
+                            <i class="fas fa-heart"></i>
+                        </div>
+
+                        <div class="family-section bride-family">
+                            <div class="family-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h4 data-i18n="invitation.brideFamily">Gia Đình Cô Dâu</h4>
+                            <p class="parent-name" data-i18n="invitation.brideFather">Ông: Lê Văn C</p>
+                            <p class="parent-name" data-i18n="invitation.brideMother">Bà: Phạm Thị D</p>
+                            <div class="family-divider"></div>
+                            <p class="child-name" data-i18n="invitation.brideDaughter">Con gái: Lê Hải Ngọc</p>
+                        </div>
+                    </div>
+
+                    <div class="venue-brief">
+                        <div class="venue-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 data-i18n="invitation.venueTitle">Địa Điểm Tổ Chức</h4>
+                        <p class="venue-name">Nhà Hàng White Palace</p>
+                        <p class="venue-address">194 Hoàng Quốc Việt, Cầu Giấy, Hà Nội</p>
+                    </div>
+
+                    <div class="invitation-message">
+                        <p data-i18n="invitation.presenceMessage">Sự hiện diện của quý khách là niềm vinh hạnh cho gia đình chúng tôi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="action-btn primary-btn" id="confirmBtn">
+                <i class="fas fa-check-circle"></i>
+                <span data-i18n="invitation.confirmAttendance">Xác Nhận Tham Dự</span>
+            </button>
+            <button class="action-btn secondary-btn" id="weddingInfoBtn">
+                <i class="fas fa-info-circle"></i>
+                <span data-i18n="invitation.weddingInfo">Thông Tin Đám Cưới</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/language.js"></script>
+    <script src="js/invitation-flow.js"></script>
+</body>
+</html>

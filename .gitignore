@@ -1,0 +1,60 @@
+# Wedding Invitation Website - Git Ignore
+
+# Personal wedding photos (don't commit to public repo)
+assets/images/*.jpg
+assets/images/*.jpeg
+assets/images/*.png
+!assets/images/README.md
+
+# Music files (copyright concerns)
+assets/music/*.mp3
+assets/music/*.ogg
+assets/music/*.wav
+!assets/music/README.md
+
+# Environment and secrets
+.env
+.env.local
+config.json
+
+# AWS credentials (NEVER commit these!)
+aws-credentials.json
+.aws/
+
+# Node modules (if you add any build tools later)
+node_modules/
+package-lock.json
+
+# Build output (if you add build tools)
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.log
+*.cache
+
+# Backup files
+*.bak
+*.backup
+
+# Windows image file caches
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
